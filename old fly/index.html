@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Old Fly - Dispenser Inteligente</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="brand">
+            <div class="logo-icon"><i class="fa-solid fa-pills"></i></div>
+            <div class="brand-text">
+                <h1>Old Fly</h1>
+                <p>Dispenser Inteligente</p>
+            </div>
+        </div>
+        
+        <nav class="menu">
+            <a href="#" class="menu-item active" id="nav-dashboard">
+                <i class="fa-solid fa-border-all"></i> Dashboard
+            </a>
+            <a href="#" class="menu-item" id="nav-receitas">
+                <i class="fa-solid fa-file-lines"></i> Receitas
+            </a>
+        </nav>
+
+        <div class="logout">
+            <a href="#" class="menu-item">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i> Sair
+            </a>
+        </div>
+    </div>
+
+    <main class="main-content">
+        
+        <section id="view-dashboard" class="view-section active">
+            <header>
+                <h2>Dispenser</h2>
+                <p>Simulação dos containers</p>
+            </header>
+
+            <div class="dispenser-grid">
+                <div class="dispenser-card card-red">
+                    <span class="badge badge-red">#1</span>
+                    <div class="inner-shape">
+                        <div class="dot"></div>
+                    </div>
+                    <h3>Losartana</h3>
+                    <p>50mg</p>
+                </div>
+                <div class="dispenser-card card-yellow">
+                    <span class="badge badge-yellow">#2</span>
+                    <div class="inner-shape">
+                        <div class="dot"></div>
+                    </div>
+                    <h3>Metformina</h3>
+                    <p>500mg</p>
+                </div>
+                <div class="dispenser-card card-green">
+                    <span class="badge badge-green">#3</span>
+                    <div class="inner-shape">
+                        <div class="dot"></div>
+                    </div>
+                    <h3>Vitamina D</h3>
+                    <p>250mg</p>
+                </div>
+                <div class="dispenser-card card-blue dashed">
+                    <span class="badge badge-blue">#4</span>
+                    <div class="inner-shape">
+                        <div class="dot"></div>
+                    </div>
+                    <h3>Amoxicilina</h3>
+                    <p>875mg</p>
+                </div>
+            </div>
+
+            <h2 class="section-title">Meus Remédios</h2>
+            <div class="remedios-list">
+                <div class="remedio-item">
+                    <div class="status-dot dot-red"></div>
+                    <div class="remedio-info">
+                        <div class="remedio-header">
+                            <h4>Losartana</h4>
+                            <span class="tag tag-green">Contínuo</span>
+                            <span class="tag tag-red"><i class="fa-solid fa-triangle-exclamation"></i> Estoque Baixo</span>
+                        </div>
+                        <p>Cardiovascular • 50mg • Container #1</p>
+                        <p class="time"><i class="fa-regular fa-clock"></i> 08:00, 20:00</p>
+                    </div>
+                    <div class="actions">
+                        <i class="fa-solid fa-pen"></i>
+                        <i class="fa-solid fa-trash text-red"></i>
+                    </div>
+                </div>
+                <div class="remedio-item">
+                    <div class="status-dot dot-yellow"></div>
+                    <div class="remedio-info">
+                        <div class="remedio-header">
+                            <h4>Metformina</h4>
+                            <span class="tag tag-green">Contínuo</span>
+                        </div>
+                        <p>Diabetes • 500mg • Container #2</p>
+                        <p class="time"><i class="fa-regular fa-clock"></i> 07:00, 12:00, 18:00</p>
+                    </div>
+                    <div class="actions">
+                        <i class="fa-solid fa-pen"></i>
+                        <i class="fa-solid fa-trash text-red"></i>
+                    </div>
+                </div>
+                <div class="remedio-item">
+                    <div class="status-dot dot-green"></div>
+                    <div class="remedio-info">
+                        <div class="remedio-header">
+                            <h4>Vitamina D</h4>
+                            <span class="tag tag-gray">Estático</span>
+                        </div>
+                        <p>Vitamina • 100mg • Container #3</p>
+                        <p class="time"><i class="fa-regular fa-clock"></i> 08:00</p>
+                    </div>
+                    <div class="actions">
+                        <i class="fa-solid fa-pen"></i>
+                        <i class="fa-solid fa-trash text-red"></i>
+                    </div>
+                </div>
+                <div class="remedio-item">
+                    <div class="status-dot dot-blue"></div>
+                    <div class="remedio-info">
+                        <div class="remedio-header">
+                            <h4>Amoxicilina</h4>
+                            <span class="tag tag-yellow">Programado</span>
+                        </div>
+                        <p>Antibiótico • 875mg • Container #4</p>
+                        <p class="time"><i class="fa-regular fa-clock"></i> 08:00, 20:00</p>
+                    </div>
+                    <div class="actions">
+                        <i class="fa-solid fa-pen"></i>
+                        <i class="fa-solid fa-trash text-red"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="view-receitas-vazia" class="view-section" style="display: none;">
+            <header class="header-flex">
+                <div>
+                    <h2>Receitas</h2>
+                    <p>Organize suas receitas médicas</p>
+                </div>
+                <button class="btn btn-primary" id="btn-nova-receita"><i class="fa-solid fa-plus"></i> Nova Receita</button>
+            </header>
+
+            <div class="empty-state-card">
+                <div class="empty-icon">
+                    <i class="fa-solid fa-file-lines"></i>
+                </div>
+                <p>Nenhuma receita cadastrada ainda.</p>
+                <button class="btn btn-outline" id="btn-add-primeira"><i class="fa-solid fa-plus"></i> Adicionar primeira receita</button>
+            </div>
+        </section>
+
+        <section id="view-receitas-form" class="view-section" style="display: none;">
+            <header class="header-flex">
+                <div>
+                    <h2>Receitas</h2>
+                    <p>Organize suas receitas médicas</p>
+                </div>
+                <button class="btn btn-primary"><i class="fa-solid fa-plus"></i> Nova Receita</button>
+            </header>
+
+            <div class="form-card">
+                <form id="form-receita">
+                    <div class="form-row">
+                        <div class="form-group w-50">
+                            <label>Médico</label>
+                            <input type="text" placeholder="Nome do médico">
+                        </div>
+                        <div class="form-group w-50">
+                            <label>Data</label>
+                            <input type="date">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Medicamentos (separados por vírgula)</label>
+                        <input type="text" placeholder="Losartana, Metformina...">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Foto da Receita</label>
+                        <div class="upload-actions">
+                            <button type="button" class="btn btn-outline-small" id="btn-foto"><i class="fa-solid fa-camera"></i> Tirar Foto</button>
+                            <button type="button" class="btn btn-outline-small" id="btn-anexo"><i class="fa-solid fa-image"></i> Anexar Imagem</button>
+                            <input type="file" id="input-camera" accept="image/*" capture="environment" style="display: none;">
+                            <input type="file" id="input-gallery" accept="image/*" style="display: none;">
+                        </div>
+                        <div id="file-preview" style="margin-top: 10px; font-size: 13px; color: var(--green-text); display: none;">
+                            <i class="fa-solid fa-check"></i> Arquivo selecionado: <span id="file-name"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-footer">
+                        <button type="button" class="btn btn-outline-small" id="btn-cancelar">Cancelar</button>
+                        <button type="submit" class="btn btn-primary">Salvar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Old Fly - Detalhes do Estoque</title>
+    <link rel="stylesheet" href="../css/style.css"> 
+    <link rel="stylesheet" href="../css/estoque.css"> 
+</head>
+<body>
+    <div class="sidebar">
+        <div class="brand">
+            <div class="logo-icon"><i class="fa-solid fa-pills"></i></div>
+            <div class="brand-text">
+                <h1>Old Fly</h1>
+                <p>Dispenser Inteligente</p>
+            </div>
+        </div>
+        
+        <nav class="menu">
+            <a href="../index.html" class="menu-item">
+                <i class="fa-solid fa-border-all"></i> Dashboard
+            </a>
+            <a href="#" class="menu-item active">
+                <i class="fa-solid fa-box-archive"></i> Estoque
+            </a>
+        </nav>
+
+        <div class="logout">
+            <a href="#" class="menu-item">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i> Sair
+            </a>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <header>
+            <button onclick="window.location.href='../index.html'" class="btn btn-back">
+                <i class="fa-solid fa-chevron-left"></i> Voltar
+            </button>
+            <h2>Detalhes do Estoque</h2>
+        </header>
+
+        <section class="remedio-detalhes">
+            <div class="info-card">
+                <div class="header-info">
+                    <span class="tag tag-green">Contínuo</span>
+                    <h2 id="nome-remedio">Carregando...</h2>
+                    <p class="tagline">Informações detalhadas do medicamento</p>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <label>Container</label>
+                        <p>#1</p>
+                    </div>
+                    <div class="stat-item">
+                        <label>Estoque Atual</label>
+                        <p><span id="qtd-atual">24</span> un.</p>
+                    </div>
+                    <div class="stat-item">
+                        <label>Status</label>
+                        <p id="status-estoque">Ok</p>
+                    </div>
+                </div>
+
+                <div class="description">
+                    <h3>Configurações de Uso</h3>
+                    <p>Este medicamento está configurado para o dispenser automático. O sistema emitirá alertas nos horários programados.</p>
+                </div>
+
+                <div class="actions">
+                    <button class="btn btn-edit">Editar Horários</button>
+                    <div class="add-stock-container">
+                        <input type="number" id="input-qtd" placeholder="Qtd. comprada" min="1" class="form-input-small">
+                        <button class="btn btn-primary" id="btn-add-estoque">Adicionar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-card pharmacy-card">
+                <h3><i class="fa-solid fa-cart-shopping"></i> Comparativo de Preços</h3>
+                <p class="tagline">Menores preços encontrados em farmácias próximas</p>
+                <div id="lista-farmacias" class="pharmacy-list">
+                    <!-- Preenchido dinamicamente pelo estoque.js -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script src="../js/estoque.js"></script>
+</body>
+</html>

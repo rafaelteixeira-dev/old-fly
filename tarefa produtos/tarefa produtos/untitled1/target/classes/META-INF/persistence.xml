@@ -1,0 +1,24 @@
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             version="3.0">
+    <persistence-unit name="meu_primeiro_banco">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <properties>
+            <property name="jakarta.persistence.jdbc.url"
+                      value="jdbc:mysql://localhost:3306/meu_primeiro_banco"/>
+            <property name="jakarta.persistence.jdbc.user"
+                      value="root"/>
+            <property name="jakarta.persistence.jdbc.password"
+                      value="123456"/>
+            <property name="jakarta.persistence.jdbc.driver"
+                      value="com.mysql.cj.jdbc.Driver"/>
+
+            <property name="hibernate.dialect"
+                      value="org.hibernate.dialect.MySQLDialect"/>
+            <property name="hibernate.show_sql"
+                      value="true"/>
+            <property name="hibernate.hbm2ddl.auto"
+                      value="update"/>
+        </properties>
+    </persistence-unit>
+</persistence>
